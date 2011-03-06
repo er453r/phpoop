@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . http://127.0.0.1:8888/eclipse/POOP/example/index.php
+</IfModule>

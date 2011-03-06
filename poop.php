@@ -90,7 +90,7 @@ class poop{
 	function process_request(){		
 		$this->request_uri = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 		
-		if(strpos($this->request_uri,$this->site_addr)===FALSE)
+		if(strpos($this->request_uri, $this->site_addr) === false)
 			$this->teleport($this->site_addr);
 			
 		if($this->request_uri == $this->site_addr.'/'.$this->styles_dir.'/'){
@@ -178,7 +178,7 @@ class poop{
 
 	/** Includes the file, but buffers the output in a string
 	@return String with the buffered output
-	*/	
+	*/
 	function inject($file){
 		ob_start();
 		include($file);
