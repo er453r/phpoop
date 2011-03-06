@@ -33,26 +33,26 @@ Everybody likes poop.
 */
 class poop{
 	/** Title of the site */
-	var $title = 'Poop';
+	public $title = 'Poop';
 	/** Title of the homepage */
-	var $homepage_title = 'Home';
+	public $homepage_title = 'Home';
 	/** Url of the site */
-	var $site_addr = '';
+	public $site_addr = '';
 	/** Timezone to use by the PHP */
-	var $time_zone = 'Europe/Warsaw';
+	public $time_zone = 'Europe/Warsaw';
 	/** Internal PHP encoding */
-	var $encoding = 'UTF-8';
+	public $encoding = 'UTF-8';
 	
 	/** Path to search for includes */
-	var $includes_dir = 'includes';
+	public $includes_dir = 'includes';
 	/** Path to search for classes */
-	var $classes_dir = 'classes';
+	public $classes_dir = 'classes';
 	/** Path to search for pages */
-	var $pages_dir = 'pages';
+	public $pages_dir = 'pages';
 	/** Path to search for scripts */
-	var $scripts_dir = 'scripts';
+	public $scripts_dir = 'scripts';
 	/** Path to search for styles */
-	var $styles_dir = 'styles';
+	public $styles_dir = 'styles';
 	
 	/** Constructs poop */
 	function __construct(){
@@ -88,14 +88,15 @@ class poop{
 
 	/** Processes the request uri */
 	function process_request(){		
-		$this->request_uri = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+		$this->request_uri = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$_SERVER['REQUEST_URI'];
 		
-		if(strpos($this->request_uri, $this->site_addr) === false)
-			$this->teleport($this->site_addr);
+		//if(strpos($this->request_uri, $this->site_addr) === false)
+		//	$this->teleport($this->site_addr);
 			
 		if($this->request_uri == $this->site_addr.'/'.$this->styles_dir.'/'){
 			header('content-type: text/css'); 
-
+			
+			$string = '';
 			foreach(glob($this->styles_dir.'/*.css') as $file)
 				$string .= file_get_contents($file);
 				
@@ -166,7 +167,7 @@ class poop{
 	@return String containing path in a format of ul>li 
 	*/	
 	function get_path(){
-		$string .= '<ul id="poop-path">';
+		$string = '<ul id="poop-path">';
 		
 		foreach($this->path as $step)
 				$string .= '<li><a href="'.$step['link'].'" title="'.$step['title'].'">'.$step['name'].'</a></li>';

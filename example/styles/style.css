@@ -1,0 +1,100 @@
+html{
+	font-size:12px;
+	margin:0;
+	padding:0;
+	background:url('gfx/bg.png') repeat-x #c0c0c0;
+	font-family: Tahoma;
+	color:#000000;
+}
+
+body{
+	margin:0 auto;
+	padding:0;
+	width:700px;
+}
+
+a{
+	text-decoration:none;
+	color:#000000;
+}
+
+ul#menu{
+	background:url('gfx/logo.png') no-repeat left center;
+	display:block;
+	text-align:right;
+	padding:80px 0px 20px 0px;
+	font-family: Impact;
+	font-size:2em;
+	letter-spacing:-2px;
+}
+
+#menu li{
+	display:inline;
+	margin-left:32px;
+}
+
+#menu li a{
+	color:#c0c0c0;
+}
+
+#menu li a:hover{
+	color:#000000;
+	letter-spacing:4px;
+}
+
+ul#poop-path{
+	display:block;
+	margin:8px 0px;
+}
+
+ul#poop-path li{
+	display:inline;
+}
+
+ul#poop-path li a.last, ul#poop-path li a:hover{
+	color:#000000;
+	font-weight:bold;
+}
+
+div#loading{
+	background:url('gfx/fbg.png') center center  no-repeat;
+	margin:8px auto;
+	font-size:1.2em;
+	padding:16px;
+	display:block;
+	text-align:center;
+	color:#ffffff;
+	font-weight:bold;
+}
+
+div#loading span{
+	background:url('gfx/loading.gif') left center no-repeat;
+	padding:16px 8px 16px 32px;
+}
+
+div#poop-content{
+	background:#ffffff;
+	-moz-border-radius:16px;
+	border:1px solid #c0c0c0;
+	margin:16px auto;
+	padding:16px;
+}
+
+ul#poop-path span{
+	padding:0px 8px;
+}
+
+#content{
+	clear:both;
+	font-weight:light;
+}
+
+#footer{
+	background:url('gfx/foot.png') no-repeat right center;
+	text-align:center;
+	padding:16px;
+	margin:8px 0px;
+	color:#c0c0c0;
+	font-weight:bold;
+	font-size:0.8em;
+}
