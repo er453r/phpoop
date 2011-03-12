@@ -8,4 +8,12 @@ $(document).ready(function(){
 			//
 		}
 	});
+	
+	$('#menu a').mouseenter(function(){
+		  $(this).animate({'letter-spacing': 2}, 500);
+	});
+	
+	$('#menu a').mouseleave(function(){
+		  $(this).animate({'letter-spacing': -2}, 500);
+	});
 });

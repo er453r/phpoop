@@ -41,7 +41,7 @@ $.fn.ajaxize = function(options){
 	return this.each(function(){
 		if(!$(this).hasClass('ajaxized')){
 			$(this).attr('alt',$(this).attr('href'));
-			$(this).attr('href',options.to);
+			//$(this).attr('href',options.to);
 			$(this).addClass('ajaxized');
 		}
 	});

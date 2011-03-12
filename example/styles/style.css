@@ -22,15 +22,21 @@ ul#menu{
 	background:url('gfx/logo.png') no-repeat left center;
 	display:block;
 	text-align:right;
-	padding:80px 0px 20px 0px;
+	padding:100px 0px 20px 200px;
 	font-family: Impact;
 	font-size:2em;
 	letter-spacing:-2px;
 }
 
 #menu li{
-	display:inline;
-	margin-left:32px;
+	display:block;
+	width:100px;
+	float:left;
+	text-align: center;
+}
+
+p:first-letter{
+	padding-left: 64px;
 }
 
 #menu li a{
@@ -39,19 +45,19 @@ ul#menu{
 
 #menu li a:hover{
 	color:#000000;
-	letter-spacing:4px;
+	letter-spacing:2px;
 }
 
-ul#poop-path{
+ul#path{
 	display:block;
-	margin:8px 0px;
+	margin:0px 0px 8px 0px;
 }
 
-ul#poop-path li{
+ul#path li{
 	display:inline;
 }
 
-ul#poop-path li a.last, ul#poop-path li a:hover{
+ul#path li a.last, ul#path li a:hover{
 	color:#000000;
 	font-weight:bold;
 }
@@ -72,7 +78,7 @@ div#loading span{
 	padding:16px 8px 16px 32px;
 }
 
-div#poop-content{
+div#content{
 	background:#ffffff;
 	-moz-border-radius:16px;
 	border:1px solid #c0c0c0;
@@ -80,7 +86,7 @@ div#poop-content{
 	padding:16px;
 }
 
-ul#poop-path span{
+ul#path span{
 	padding:0px 8px;
 }
 
