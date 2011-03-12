@@ -2,3 +2,5 @@ POOP - PHP Object Oriented Portal
 =================================
 
 Super simple engine for effective PHP pages.
+
+Example uses jQuery for UI effects.
